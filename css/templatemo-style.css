@@ -380,11 +380,12 @@ ul {
     display:block;
     margin-left: auto;
     margin-right: auto;
-    width:60%;
+    width:100%;
     /*height:30%;*/
 }
 .center-text{
-    text-align: left;
+    text-align: justify;
+  text-justify: inter-word;
 }
 .center-text h4 {
 	display: inline-block;
