@@ -217,7 +217,7 @@ ul {
   overflow: hidden;
 }
 .panel__wrapper {
-  padding: 0;
+  padding: 1000;
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
@@ -383,29 +383,9 @@ ul {
     width:100%;
     /*height:30%;*/
 }
-.center-text{
-    text-align: justify;
-  text-justify: inter-word;
-}
-.center-text h4 {
-	display: inline-block;
-	padding-bottom: 5px;
-	font-size: 22px;
-	color: #fff;
-	font-weight: 400;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	margin-top: 0px;
-	margin-bottom: 10px;
-	border-bottom: 2px solid #fff;
-}
-.center-text h4 em {
-	color: #fa5252;
-	font-style: normal;
-}
-.center-text p {
-	color: #fff;
-	margin-bottom: 25px;
+.project-image-map{
+    width:100%;
+    /*height:30%;*/
 }
 .project-content {
 	height: 90vh;
@@ -413,6 +393,10 @@ ul {
 	padding: 0px 60px;
 	position: relative;
 	margin: 10vh auto 0 auto;
+}
+.project-content .left-text {     
+	float: left;     
+	width: 100%; 
 }
 
 .project-content h1 {
@@ -429,7 +413,7 @@ ul {
 	font-style: normal;
 	font-weight: 800;
 }
-.project-details {
+/* .project-details {
     height: 100vh;
     text-align: center;
     padding: 0px 30px;
@@ -445,8 +429,34 @@ ul {
   padding: 0px 60px;
   position: relative;
   margin: 0 auto;
+} */
+
+
+.project-content .left-text h4 {
+	display: inline-block;
+	padding-bottom: 5px;
+	font-size: 22px;
+	color: #fff;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #fff;
 }
 
+.project-content .left-text h4 em {
+	color: #fa5252;
+	font-style: normal;
+}
+
+.project-content .left-text p {
+	color: #fff;
+	margin-bottom: 25px;
+}
+.project-content .heading {
+  padding-top: 10%;
+}
 
 /*
 ========================
@@ -518,6 +528,26 @@ ul {
 ========================
 */
 
+.project-maps{
+  margin-left: auto; 
+  margin-right: auto;
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;   
+}
+.project-maps a{
+  vertical-align: top;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  width: 30%;
+}
+.stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}
 .projects-content {
   height: 100vh;
   background-color: rgba(45, 58, 75, 0.5);
@@ -753,27 +783,68 @@ ul {
     margin-left: 15px;
     margin-right: 15px;
   }
-  .projects-content {
-    width: 100vh;
-    height: 100vh;
+  .home-content {
+    text-align: center;
+    margin: 0 auto;
+    height: auto;
     padding: 0px 30px;
+    width: 100vw;
   }
-  .project-item  {
-    padding: 0px 120px;
+  .project-content .project-box-content {
+    right: 0;
+    margin-bottom: 30px;
   }
-  .project-item img {
-    max-width: 100%;
+  .project-content h1 {
+    margin-bottom: 0px;
+    padding-top: 60px;
+    font-size: 22px;
   }
-  .projects-content .heading {
-    padding-top: 25%;
+  .project-content h1 em {
+    font-size: 36px;
   }
-  .projects-content .owl-carousel {
-    margin: 0;
+  .project-content .left-text {     
+    float: none;     
+    width: auto; 
+  }
+  .project-content .project-image {
+    text-align: center;
+    float: none;
+    margin-top: 30px;
+  }
+  /* .project-content .project-image-map {
+    text-align: center;
+    float: none;
+    margin-top: 30px;
+    width: 30%;
+  } */
+  .project-content {
+    text-align: center;
+    margin: 0 auto;
+    height: auto;
+    padding: 0px 30px;
+    width: 100vw;
+  }
+  .project-maps{
+    margin-left: auto; 
+    margin-right: auto;
+
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;   
+  }
+  .project-maps a{
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+  }
+  .stretch {
     width: 100%;
-  }
-  .projects-content .text-content {
-    display: none;
-  }
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+    }
+  
   .contact-content .more-info {
     padding: 30px;
     margin-top: 0px;
@@ -796,15 +867,6 @@ ul {
     padding-top: 15%;
   }
   
-  .project-details {
-    height: 100vh;
-    text-align: center;
-    padding: 0px 30px;
-    width: 100vw;
-  }
-  .project-details .heading {
-    padding-top: 10%;
-  }
 }
 
 

@@ -62,7 +62,7 @@ https://templatemo.com/tm-505-stacked
                             <img class="project-image" src="img/autobattler/autobattler-header.png" alt="" >
                             <br>
                             
-                            <div class="center-text">
+                            <div class="left-text">
                               <h4><em>Overview</em></h4>
                               <p>This game begins with the player in a buying phase where they are able to purchase units from a selection of random ones for the upcoming battles. Each unit has a set and tribe attribute that provides bonuses to the team depending on how many of that particular set/tribe are present on the player's team. Additionally, if three of the same unit are present they will be replaced with a more powerful version of the unit. Following this phase a randomly generated map for the current game will be shown to the player where they can view the paths available to them and choose their next destination. In combat nodes on the map the player will be faced with an enemy board layout which they can position against before starting combat. The battle will play out automatically when the player's positions are finalized. Eventually the player will arrive at the final node on the map where they will be put up against a more powerful foe and upon defeating said enemy they will proceed to the next stage (with a new map and more powerful enemies).</p>
                               <br>
@@ -85,18 +85,27 @@ https://templatemo.com/tm-505-stacked
               <div class="container">
                 <div class="row">
                   <div class="col-md-8 col-md-offset-2">
-                    <div class="project-details">
+                    <div class="project-content">
                       <div class="heading">
-                        <h4>Map Generation</h4>
-                        <img class="project-image" src="img/right-home-image.jpg" alt="" >   
+                        <!-- <h4>The Map</h4> -->
+                        <div class="project-maps">
+                            <a><img class="project-image-map" src="img/autobattler/autobattler-map-1.png" alt=""></a> 
+                            <a><img class="project-image-map" src="img/autobattler/autobattler-map-2.png" alt=""></a>
+                            <a><img class="project-image-map" src="img/autobattler/autobattler-map-3.png" alt=""></a>
+                            <span class="stretch"></span>
+                        </div>
                       </div>
                       
                       <div class="row">
                         <div class="col-md-12">
                           <div class="project-box-content">
-                            <div class="center-text">
-                              <h4>My <em>Project</em> Portfolio</h4>
-                              <p><b>Welcome!</b> This is my website showing some of the projects that I've been working on. You'll be able to see how these projects work and some of my thought processes while working through them. If you're interested there are links to the source code located on github. Thanks for stopping by!</p>
+                            <div class="left-text">
+                              <h4><em>The Map</em></h4>
+                              <p>The map is randomly generated at the start of each playthrough and follows a series of rules to determine the layout. Each path is guarenteed to be able to reach the final boss node. Each node contains an event that is also randomly determined, with the chance of that event spawning being tied to a weight value of the node type.<br> Parameters that can be set for generating the map include, the minimum/maximum number of nodes per level, the maximum of nodes that can be the destination of one node (number of forward connections) and the number of levels (nodes in a path from start to end).</p>
+                            </div>
+                            <br>
+                            <div class="primary-button">
+                                <a href="https://github.com/JustinMWoo/AutoBattler#map">Click here for a more detailed explanation</a>
                             </div>
                                                    
                           </div>
@@ -116,25 +125,57 @@ https://templatemo.com/tm-505-stacked
               <div class="container">
                 <div class="row">
                   <div class="col-md-8 col-md-offset-2">
-                    <div class="project-details">
+                    <div class="project-content">
                       <div class="heading">
-                        <h4>Game Mechanic 2</h4>
-                        <img class="project-image" src="img/project-item-01.jpg" alt="" >   
+                        <!-- <h4>Combat</h4> -->
+                        <img class="project-image" src="img/autobattler/autobattler-combat.gif" alt="" >   
                       </div>
                       
                       <div class="row">
                         <div class="col-md-12">
                           <div class="project-box-content">
-                            <div class="center-text">
-                              <h4>My <em>Project</em> Portfolio</h4>
-                              <p><b>Welcome!</b> This is my website showing some of the projects that I've been working on. You'll be able to see how these projects work and some of my thought processes while working through them. If you're interested there are links to the source code located on github. Thanks for stopping by!</p>
+                            <div class="left-text">
+                              <h4><em>Combat</em></h4>
+                              <p>Combat is split into several phases where multiple actions can occur. At the beginning of combat, bonuses are set up depending on the number of units in each set and tribe for each team. Then a cycle begins in which units are organized by their speed stat (with randomization if multiple units have the same speed) and each unit gets their turn. For each unit in the cycle they have a turn start, attack and turn end. If a unit's turn ends and there are no units on one of the boards, combat ends, otherwise another cycle begins. Events may subscribe to any event in combat to make it easy to create new units and bonuses that interact at certain points in the battle. Additionally, units have attack and defence modifiers that interact with how they deal and recieve damage.</p>
+                            </div>                       
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        
+        <section class="panel b-yellow" id="4">
+          <article class="panel__wrapper">
+            <div class="panel__content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <div class="project-content">
+                      <div class="heading">
+                        <h4>Github</h4>
+                      </div>
+                      
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="project-box-content">
+                            <div class="left-text">
+                              <p>For more information and source code for the scripts used in the game click below.</p>
+                            </div>
+                            <br>
+                            <div class="primary-button">
+                                <a href="https://github.com/JustinMWoo/AutoBattler">To Github</a>
                             </div>
                                                    
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> 
                 </div>
               </div>
             </div>
@@ -247,7 +288,7 @@ https://templatemo.com/tm-505-stacked
             </div>
           </article>
         </section> -->
-        <section class="panel b-green" id="4">
+        <section class="panel b-green" id="5">
           <article class="panel__wrapper">
             <div class="panel__content">
               <div class="container">
