@@ -3322,7 +3322,8 @@ var scrolly = function(e) {
 }
 
 var init = function() {
-  burger.addEventListener('click', openMenu, false);
+  if(burger !== null)
+    burger.addEventListener('click', openMenu, false);
   window.addEventListener('scroll', scrollFx, false);
   window.addEventListener('load', scrollFx, false);
   $('a[href^="#"]').on('click',scrolly);
