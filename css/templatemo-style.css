@@ -833,6 +833,21 @@ ul {
     float: none;
     margin-top: 30px;
   }
+  .projects-content {
+    width: 100vh;
+    height: 100vh;
+    padding: 0px 30px;
+  }
+  .projects-content .heading {
+    padding-top: 25%;
+  }
+  .projects-content .owl-carousel {
+    margin: 0;
+    width: 100%;
+  }
+  .projects-content .text-content {
+    display: none;
+  }
   /* .project-content .project-image-map {
     text-align: center;
     float: none;
