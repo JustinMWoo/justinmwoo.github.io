@@ -3291,7 +3291,7 @@ panel.eq(0).find('.panel__content').addClass('panel__content--active');
 
 var scrollFx = function() {
   var ds = doc.scrollTop();
-  var of = vh / 4;
+  var of = vh / 2;
   
   // if the panel is in the viewport, reveal the content, if not, hide it.
   for (var i = 0; i < panel.length; i++) {
