@@ -1,0 +1,269 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Justin Woo - Auto Battler</title>
+<!--
+Stacked Template
+https://templatemo.com/tm-505-stacked
+-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <nav class="nav">
+            <div class="back-arrow" onclick="window.location='index.html';">
+                <img src="img/back-arrow.png" alt=""></a>
+            </div>
+            <!--
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#1" class="nav__link c-blue"><img src="img/home-icon.png" alt=""></a>
+          </li>
+          <li class="nav__item">
+            <a href="#2" class="nav__link c-yellow scrolly"><img src="img/about-icon.png" alt=""></a>
+          </li>
+          <li class="nav__item">
+            <a href="#3" class="nav__link c-red"><img src="img/projects-icon.png" alt=""></a>
+          </li>
+          <li class="nav__item">
+            <a href="#4" class="nav__link c-green"><img src="img/contact-icon.png" alt=""></a>
+          </li>
+        </ul> -->
+        </nav>
+
+        <section class="panel b-blue" id="1">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="home-heading">
+                                        <h1><em>iMSTK Plugin for Unreal Engine</em></h1>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <img class="project-image" src="img/imstk/imstk_header.png" alt="">
+                                                <br>
+
+                                                <div class="left-text">
+                                                    <h4><em>Overview</em></h4>
+                                                    <p>This plugin provides access to iMSTK's medically accurate soft body simulation within Unreal Engine by replacing the existing physics simulation for selected objects. Components and actors from the plugin can be added to quickly and easily set up the simulation in any level. The plugin also allows for the importing of tetrahedral meshes and image data into the engine, which can then be used with the provided components to simulate volumetric tissues and other materials.</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel b-yellow" id="2">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+
+                                        <video class="project-image" controls><source src="img/imstk/imstk_tetrahedral.mp4"> </video>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>Tetrahedral Meshes and Image Data</em></h4>
+                                                    <p>Tetrahedral meshes can be imported into Unreal, saving the volumetric mesh as well as extracting a surface mesh and saving them as assets. When these file types get imported into the editor, the data is passed into iMSTK to extract the vertex positions and indices for connecting the tetrahedra. These values are saved onto a TetrahedralMeshAsset which can be used in conjunction with components provided in the plugin to simulate volumetric models. Similarly, image data files can also be imported and used in Unreal Engine.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel b-yellow" id="2">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+                                        <video class="project-image" controls><source src="img/imstk/imstk_pbd.mp4"> </video>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>PBD Models</em></h4>
+                                                    <p>Position based dynamics models can be simulated by adding a PBDModel component to an actor. Several preset geometry types can be selected, including capsules, cylinders and spheres. A surface mesh geometry can also be selected to take the relevant information from a static mesh component on the actor and import it into iMSTK at runtime by extracting the position vertex buffer and index buffer from the static mesh and creating the same mesh in the simulation within iMSTK. The vertices can be fixed to their starting position in iMSTK by either listing specific vertices or by adding a separate actor which will freeze any vertices inside of its bounds. Variables pertaining to the constraints that can be applied to a model with the selected settings will appear dynamically. These constraints will be applied to the model within iMSTK.
+                                                    <br />At the start of simulation the static mesh component on the actor is replaced with a procedural mesh component and the positions of each vertex is then updated by the iMSTK subsystem.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="owl-carousel owl-theme projects-container">
+                                                    <div>
+                                                        <div class="project-item">
+                                                            <a href="img/imstk/imstk_managersettings.png" data-lightbox="image-1">
+                                                                <img src="img/imstk/imstk_managersettings.png"
+                                                                     alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="project-item">
+                                                            <a href="img/imstk/imstk_interaction.png" data-lightbox="image-1">
+                                                                <img src="img/imstk/imstk_interaction.png"
+                                                                     alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>Interactions</em></h4>
+                                                    <p>Interactions are defined on a model-to-model basis for each simulation. Models can be set to collide by assigning the interaction between them, which can be further customized by adjusting values such as friction, stiffness and restitution depending on the type of models in the collision. With a controller actor, you may also select a multitude of other interaction types including cutting, burning and grasping.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+                                        <video class="project-image" controls><source src="img/imstk/imstk_controller.mp4"> </video>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>Controllers</em></h4>
+                                                    <p>Controllers can be added to a level to allow the player to quickly create a tool to interact with the simulation. Controllers can be set to have the same geometry types as a PBD models, but have additional settings for how they interact with other models and can be controlled directly. The controls for the model can be set on the blueprint as well as whether the tool should be directly moved to the position or moved using forces, allowing it to be impacted by opposing forces as well. The forces to move the object to the desired location are calculated in Unreal and the value is passed into iMSTK. Then the actual location of the model is relayed back to Unreal to display the position to the player.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="panel b-green" id="4">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="contact-content">
+                                    <div class="heading">
+                                        <h4>Contact Me</h4>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <div class="contat-form">
+                                                <form id="contact-form" action="https://formspree.io/f/xpzkojya" method="POST">
+                                                    <fieldset>
+                                                        <input name="name" type="text" class="form-control" id="name" placeholder="Your Name"
+                                                               required="">
+
+                                                        <input name="_replyto" type="email" class="form-control" id="email" placeholder="Email"
+                                                               required="">
+
+                                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"
+                                                                  required=""></textarea>
+
+                                                        <button type="submit" id="form-submit" class="btn">Send Message</button>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

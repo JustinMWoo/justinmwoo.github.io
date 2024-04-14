@@ -1,0 +1,427 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Justin Woo - Auto Battler</title>
+<!--
+Stacked Template
+https://templatemo.com/tm-505-stacked
+-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <nav class="nav">
+            <div class="back-arrow" onclick="window.location='index.html';">
+                <img src="img/back-arrow.png" alt=""></a>
+            </div>
+            <!--
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#1" class="nav__link c-blue"><img src="img/home-icon.png" alt=""></a>
+          </li>
+          <li class="nav__item">
+            <a href="#2" class="nav__link c-yellow scrolly"><img src="img/about-icon.png" alt=""></a>
+          </li>
+          <li class="nav__item">
+            <a href="#3" class="nav__link c-red"><img src="img/projects-icon.png" alt=""></a>
+          </li>
+          <li class="nav__item">
+            <a href="#4" class="nav__link c-green"><img src="img/contact-icon.png" alt=""></a>
+          </li>
+        </ul> -->
+        </nav>
+
+        <section class="panel b-blue" id="1">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="home-heading">
+                                        <h1><em>Minimally Invasive</em></h1>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <img class="project-image" src="img/minimally_invasive/Splash.png" alt="">
+                                                <br>
+
+                                                <div class="left-text">
+                                                    <h4><em>Overview</em></h4>
+                                                    <p>Minimally Invasive is a VR experience where the player is thrust into the role of a surgeon in a futuristic dystopian universe where they must perform surgery on aliens and cyborgs. The player pilots a bus fitted with technology to shrink down and enter the patient and perform the necessary surgeries. After flying to the destination within the bus, the player can exit and use tentacle like mechanical arms to interact with environmental puzzles to treat the patient.</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="panel b-yellow" id="2">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+                                        <img class="project-image" src="img/minimally_invasive/mi_screenshot1.png" alt="">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>Tool Arms Overview</em></h4>
+                                                    <p>
+                                                        I designed the mechanical tool arms to mimic the controls of real world surgical tools if they were controlled from a first-person perspective while also keeping them fun to use. The arms can be deployed whenever the player is grounded. They are controlled by holding down the clutch button and moving and orienting the controller. The tool arms are physics based, allowing them to knock around objects in the environment and react to other forces.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel b-yellow" id="2">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+                                        <video class="project-image" controls><source src="img/minimally_invasive/mi_movement.mp4"> </video>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>Tool Arm Movement</em></h4>
+                                                    <p>
+                                                        The transform of the head of the tool is set through the animation blueprint using inverse kinematics to orient the bones in the arm. Each arm has a target location that is moved directly as the player controls the tool. The target location is attached through a physics constraint to the collision parent (a set of collision objects that represent the collision of the tool head) in order to give the tool its physics-based movement. The control of the arm functions by taking a snapshot of the location and rotation of the player's hands relative to their character when the clutch button is pressed. Then the offset is calculated between the new transform of their hands and the snapshot. The location offset is applied to the target location to adjust its position. The rotation of the hand is adjusted to the orientation of the player and then transformed to the direction of the target location to rotate the tool in a way that feels natural to the player.
+                                                        Lastly, if the movement of the player's hand was great enough to cause the arm to move out of its maximum range, an adjusted offset vector is calculated by determining the length of a vector in the direction of the offset vector that intersects with the maximum radius of the arm.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+                                        <video class="project-image" controls><source src="img/minimally_invasive/mi_toolheads.mp4"> </video>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>The Tool Heads</em></h4>
+                                                    <p>A diverse array of tool heads are available for the player to use according to the task at hand. When the arm is deployed, a menu can be brought up to switch between the six tools at the player's disposal.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+                                        <video class="project-image" controls><source src="img/minimally_invasive/mi_scalpel.mp4"> </video>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>The Scalpel</em></h4>
+                                                    <p>The scalpel, unsurprisingly, is used for cutting. The cover can be removed by holding the trigger to unsheathe the blade and enable it to cut. When deployed, the tool shows which parts of the environment can be cut and which angle and location they must be cut at. The scalpel is used in conjunction with other tools in order to perform tasks including severing veins and redirecting blood flow. Physics constraints are leveraged to lock the scalpel into a plane of movement that lines up with the blade as it makes contact. These constraints also provide resistance to simulate more realistic cutting through tissue. Additionally, the scalpel can be used to fend off enemies.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+                                        <video class="project-image" controls><source src="img/minimally_invasive/mi_syringe.mp4"> </video>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>The Syringe</em></h4>
+                                                    <p>This tool is used to siphon liquids from the environment to use throughout the body to perform different tasks. Liquids including acids and naturally occurring antibiotics and anti-inflammatories can be found throughout the body and, when siphoned into the syringe, will be stored in canisters located on the arms. These canisters can be removed and stored in the player's inventory. The tool can then be used to inject these fluids into tissues that require them. Through a clever use of physics constraints and collision manipulation, the needle of the syringe can only be inserted into tissues using the tip and will lock itself into movement in the direction of the needle when inserted while providing resistance to simulate insertion into tissue.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+                                        <video class="project-image" controls><source src="img/minimally_invasive/mi_grasper.mp4"> </video>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>The Grasper</em></h4>
+                                                    <p>Used to extend the player's reach and provide increased strength, the graspers act simply to pick up and manipulate objects at a distance. The player may also encounter objects that are too large and heavy for the player to pick up with their hands that must be lifted using the graspers. The graspers utilize colliders at the tips of each of the grasper's claw arms to detect when an object is grabbed alongside physics constraints to simulate it being picked up and manipulated.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+                                        <video class="project-image" controls><source src="img/minimally_invasive/mi_drill.mp4"> </video>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>The Drill</em></h4>
+                                                    <p>This tool is used to break apart certain brittle structures in the body and can be used to uncover paths or resources hidden beneath them. By using physics fields and strain, the drill is able to leverage Unreal's chaos destruction to cause certain environmental features to shatter. Additionally, the drill allows the player to dynamically adjust the strength and size of the field to adjust the strength of the drill for tougher materials at the trade-off of precision or vice versa. The drill can also be used to defend the player.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+                                        <video class="project-image" controls><source src="img/minimally_invasive/mi_scanner.mp4"> </video>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>The Scanner</em></h4>
+                                                    <p>
+                                                        The scanner is a diagnostic tool used to probe the environment and gather information about the player's surroundings. By default, it reveals a circular area at the location it is pointed at and reveals hidden patterns underneath the surface of the tissue. This can be used to solve puzzles and find connected elements throughout the patient's body. The tool utilizes sphere traces, overlay materials and material parameters to dynamically set the location in the world that should have overlay materials shown by the scanner.
+                                                        <br />
+                                                        The scanner also has a second function. By holding the trigger, the player is able to display a card describing the properties of the scanned object and how to interact with it.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+                                        <video class="project-image" controls><source src="img/minimally_invasive/mi_laser.mp4"> </video>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>The Laser</em></h4>
+                                                    <p>A multipurpose tool that is primarily used to provide a powerful laser that can cauterize bleeding tissues in the body after cutting them with the scalpel. This tool uses a line trace to cauterize spline meshes that line an adjustable spline. Once a percentage of these spline meshes are cauterized, the line itself will be considered complete and will automatically cauterize the remaining segments. The other use of the laser is to deal with distant threats with precision.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!--<section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">-->
+                                        <!-- <h4>Combat</h4> -->
+                                        <!--<img class="project-image" src="img/autobattler/autobattler-combat.gif" alt="">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>Gameplay Puzzles</em></h4>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>-->
+       
+        <section class="panel b-green" id="4">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="contact-content">
+                                    <div class="heading">
+                                        <h4>Contact Me</h4>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <div class="contat-form">
+                                                <form id="contact-form" action="https://formspree.io/f/xpzkojya" method="POST">
+                                                    <fieldset>
+                                                        <input name="name" type="text" class="form-control" id="name" placeholder="Your Name"
+                                                               required="">
+
+                                                        <input name="_replyto" type="email" class="form-control" id="email" placeholder="Email"
+                                                               required="">
+
+                                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"
+                                                                  required=""></textarea>
+
+                                                        <button type="submit" id="form-submit" class="btn">Send Message</button>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

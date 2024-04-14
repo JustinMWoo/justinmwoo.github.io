@@ -590,6 +590,16 @@ ul {
   width: 100%;
 }
 
+.project-item video {
+  width: 100%;
+
+}
+
+.project-content .owl-carousel {
+    margin: 0 -30%;
+    width: 160%;
+}
+
 .projects-content .owl-carousel {
   margin: 0 -30%;
   width: 160%;
@@ -600,7 +610,7 @@ ul {
   margin-right: 15px;
   background-color: #fff;
   padding: 25px 30px;
-  margin-top: -45px;
+  margin-top: 15px;/*-45px;*/
   position: relative;
   z-index: 2;
 }
