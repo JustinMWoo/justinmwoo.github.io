@@ -94,7 +94,7 @@ https://templatemo.com/tm-505-stacked
                                                 <div class="left-text">
                                                     <h4><em>Tool Arms Overview</em></h4>
                                                     <p>
-                                                        I designed the mechanical tool arms to mimic the controls of real world surgical tools if they were controlled from a first-person perspective while also keeping them fun to use. The arms can be deployed whenever the player is grounded. They are controlled by holding down the clutch button and moving and orienting the controller. The tool arms are physics based, allowing them to knock around objects in the environment and react to other forces.
+                                                        I designed the mechanical tool arms to mimic the controls of real world surgical tools if they were controlled from a first-person perspective while also keeping them fun to use. The arms can be deployed whenever the player is grounded. They are controlled by holding down the clutch button and moving and orienting the controller. The tool arms are physics based, allowing them to knock around objects in the environment and react to other forces. <br><br> This page will go through a quick demonstration of how each tool functions in game, followed by a more in-depth look on into the blueprints.
                                                     </p>
                                                 </div>
                                             </div>
@@ -335,6 +335,186 @@ https://templatemo.com/tm-505-stacked
                                                 <div class="left-text">
                                                     <h4><em>The Laser</em></h4>
                                                     <p>A multipurpose tool that is primarily used to provide a powerful laser that can cauterize bleeding tissues in the body after cutting them with the scalpel. This tool uses a line trace to cauterize spline meshes that line an adjustable spline. Once a percentage of these spline meshes are cauterized, the line itself will be considered complete and will automatically cauterize the remaining segments. The other use of the laser is to deal with distant threats with precision.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+		
+		<section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+									<a href="img/minimally_invasive/mi_toolmovement.png" data-lightbox="image-1">
+                                                        <img class ="project-image" src="img/minimally_invasive/mi_toolmovement.png"
+                                                             alt="">
+                                                    </a>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>The Details: Tool Movement</em></h4>
+                                                    <p>If you made it through the demonstrations and would like a more in-depth look into how it works, you've come to the right section! The image above shows the main parts of the blueprint that control the movement of the mechanical tool arms. The mechanical arm hierarchy has the primarily visual skeletal mesh "ArmMesh" along with the "MovementCollisionParent", "TargetAnchor" and "TargetLocation". The movement collision parent allows for each of the mechanical arm tool heads to have a separate collision shape that can be changed during the game (a more detailed description of the tool structure is in the following section). The movement collision parent has physics simulated for it and is attached to the "TargetLocation" using physics constraints. The movement of the arm is then calculated using the "TargetAnchor" which is updated when the arm's clutch is released and the direction of the player's hand movement in relation to its snapshot location. Then a calculation determines if the target location is within the max range of the arm and sets the "TargetLocation" if it is.
+													If it is not in range, there is a following calculation using the location out of range, the base of the arm and the "TargetAnchor" to determine a new location in the same direction as the intended movement that is within the maximum range.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+		
+		<section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+									<a href="img/minimally_invasive/mi_toolheads.png" data-lightbox="image-1">
+                                                        <img class ="project-image" src="img/minimally_invasive/mi_toolheads.png"
+                                                             alt="">
+                                                    </a>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>The Details: Tool Heads</em></h4>
+                                                    <p>When the blueprint structure for the tool heads were designed, I wanted to make sure that we could easily swap the player's tools depending on the scenario and potentially add more tools to their arsenal as we came across more ideas. Thus, I created a system with a base Actor Component with basic functionality such as activating, deactivating and constructing the tools which could then also be overwritten in the child classes for each individual tool type. This allowed for the use of an array of each of the tool classes that were wanted on the player that would be initialized with a simple loop and could be changed at any time. It also meant that creating new tool arms was a simple process of creating a new child class, assigning some variables and adding the arm's functionality to the component.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+		
+		<section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+										<div class="row">
+                                            <div class="col-md-12">
+                                                <div class="owl-carousel owl-theme projects-container">
+                                                    <div>
+                                                        <div class="project-item">
+                                                            <a href="img/minimally_invasive/mi_toolinventory1.png" data-lightbox="image-1">
+                                                                <img src="img/minimally_invasive/mi_toolinventory1.png"
+                                                                     alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="project-item">
+                                                            <a href="img/minimally_invasive/mi_toolinventory2.png" data-lightbox="image-1">
+                                                                <img src="img/minimally_invasive/mi_toolinventory2.png"
+                                                                     alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>						
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>The Details: Tool Inventory</em></h4>
+                                                    <p>For quick switching between the tool heads I created a simple inventory UI for them. The "WBP_MechArmsInventory" consists of several "WBP_MechArmButtons". These buttons contain a background image, thumbnail for the tool, the tool's name and a button with 3 blank images to accommodate the hexagonal shape of the buttons. When the buttons are clicked the index of the specific tool on the mech arm is determined and the tool on the arm is set. The buttons are initialized from the inventory by assigning each tool head to a button using a map to find the corresponding information for the tool.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+		
+		<section class="panel b-yellow" id="3">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                   <div class="heading">
+									<a href="img/minimally_invasive/mi_audio.png" data-lightbox="image-1">
+                                                        <img class ="project-image" src="img/minimally_invasive/mi_audio.png"
+                                                             alt="">
+                                                    </a>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <h4><em>The Details: Audio and WWise</em></h4>
+                                                    <p>For setting up audio I worked directly with our audio designer in order to create a system that would function how he envisioned it and would be easy for him to interact and test sounds in with minimal Unreal experience. There were many sounds systems that we worked on and created together, with one of the main ones being a switch for the sound based on the material that was collided with or cut. Using the system he designed within WWise for the audio mixing, I created several functions that changed the switches and variables on WWise's end to adjust the sounds accordingly and could be easily modified as new sounds were added. This was one of many examples where we collaborated together throughout the development of Minimally Invasive to design the sound system.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+		
+		<section class="panel b-yellow" id="4">
+            <article class="panel__wrapper">
+                <div class="panel__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="project-content">
+                                    <div class="heading">
+                                        <h4>Steam</h4>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="project-box-content">
+                                                <div class="left-text">
+                                                    <p>Click below to check out the Steam page for Minimally Invasive</p>
+                                                </div>
+                                                <br>
+                                                <div class="primary-button">
+                                                    <a href="https://store.steampowered.com/app/2331420/Minimally_Invasive/" target="_blank">To Steam</a>
                                                 </div>
                                             </div>
                                         </div>
